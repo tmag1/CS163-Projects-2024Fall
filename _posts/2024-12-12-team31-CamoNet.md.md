@@ -1,9 +1,9 @@
 ---
 layout: post
 comments: true
-title: Post Template
+title: CamoNet
 author: Thomas McGall, Alex Chen, Jake Ekoniak
-date: 2024-12-11
+date: 2024-01-01
 ---
 
 > We used a GAN approach to generate optimal camouflage patterns for individual scenes.
@@ -154,9 +154,10 @@ $$
 h_{l+1}=BN(ReLU(W_{l+1}^T∗h_l))
 $$
 
-where $h_l$ is the set of feature maps at layer $l$, $W_{l+1}$ are the trainable convolutional filters, \* denotes convolution, and BN is batch normalization.
+where $$ h_l $$ is the set of feature maps at layer $$ l $$ , $$ W_{l+1} $$
+represents the trainable convolutional filters, \( \* \) denotes convolution, and BN refers to batch normalization.
 
-The discriminator $D(x;θ_d​)$ takes an image x (generated or real) and outputs a probability $D(x)$ of the image being real. However, it diverges from standard GAN implementation by utilizing convolutions with stride to down-sample the input. Additionally, it uses batch normalization and LeakyReLU to improve stability and gradient flow.
+The discriminator $$ D(x; \theta_d) $$ takes an image $$ x $$ (either generated or real) and outputs a probability $$ D(x) $$ of the image being real. However, it diverges from the standard GAN implementation by utilizing convolutions with stride to down-sample the input. Additionally, it incorporates batch normalization and LeakyReLU to improve stability and gradient flow.
 
 The objective function used is a standard GAN minimax objective:
 
