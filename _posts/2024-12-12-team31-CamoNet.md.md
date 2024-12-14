@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: Post Template
-author: UCLAdeepvision
+author: Thomas McGall, Alex Chen, Jake Ekoniak
 date: 2024-01-01
 ---
 
@@ -166,8 +166,6 @@ $$
 
 This architectural refinement made the training process more stable and the resulting images more coherent, allowing the DCGAN generator to capture rich hierarchical representations of visual concepts.
 
-# Architecture
-
 ## Generator
 
 The generator in our architecture begins by utilizing a pretrained Vision Transformer (ViT) model. Instead of starting from random noise, it feeds an input image into the ViT to obtain a high-level, semantically rich feature vector. To achieve this, the ViT’s classification head is replaced with a custom linear layer that outputs a latent vector. Because the ViT is pretrained on large-scale data, it provides a strong, informative representation that encodes global context and abstract concepts from the input image. An input image is provided over random noise to give our model a more robust starting position when competing against the discriminator.
@@ -215,9 +213,9 @@ Below is a sample of scene images and their respective generated camouflage patt
 
 The following observations can be made:
 
-1. Many of the patterns effectively help conceal the cat
-2. The performance of the Generator is inconsistent
-   1. some patterns are very effective and some patterns are very ineffective
+1. Many of the patterns effectively help conceal the cat.
+2. The performance of the Generator is inconsistent.
+   1. Some patterns are very effective and some patterns are very ineffective.
 3. The Generator has recurring ‘template’ patterns. These templates have adjusted colors for different scenes.
 
 <!-- ![image.png](CamoNet%20Report%2015360cec15cf80b5a77af86ffab3bbef/image%204.png) -->
