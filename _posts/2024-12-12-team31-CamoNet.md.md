@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: Post Template
 author: Thomas McGall, Alex Chen, Jake Ekoniak
-date: 2024-01-01
+date: 2024-12-11
 ---
 
 > We used a GAN approach to generate optimal camouflage patterns for individual scenes.
